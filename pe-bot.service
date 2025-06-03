@@ -1,0 +1,15 @@
+[Unit]
+Description=Physical Education Attendance Bot
+After=network.target
+
+[Service]
+Type=simple
+User=YOUR_USERNAME
+WorkingDirectory=/path/to/your/bot
+Environment=PYTHONPATH=/path/to/your/bot
+ExecStart=/path/to/your/venv/bin/python main.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target 
